@@ -1,2 +1,2 @@
 # Forum
-A chatting forum made with php &amp; mysql
+A simple chatting forum made with php &amp; mysql as the database
