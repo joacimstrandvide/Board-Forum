@@ -1,65 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
+    <head>
+        <meta
+            http-equiv="Content-Type"
+            content="application/xhtml+xml; charset=UTF-8"
+        />
+        <title>Joacims Forum</title>
+        <!-- Css och fonter -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-<head>
-  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-  <title>
-    The Joacim Forum
-  </title>
-  <!-- Css och fonter -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
+    <body>
+        <!-- Logga in med existerande konto-->
+        <div class="header">
+            <h2>Joacims Forum</h2>
 
-<body>
+            <button
+                class="mainButton"
+                onclick="document.getElementById('id01').style.display='block'"
+            >
+                Logga in
+            </button>
 
-  <!-- Logga in med existerande konto-->
-  <div class="header">
-    <h2>The Joacim Forum</h2>
+            <div id="id01" class="modal">
+                <span
+                    onclick="document.getElementById('id01').style.display='none'"
+                    class="close"
+                    title="Close Modal"
+                    >×</span
+                >
+                <div class="container">
+                    <h2>Logga In</h2>
+                    <form method="post" action="index.php">
+                        <input
+                            type="text"
+                            class="log"
+                            name="Name"
+                            placeholder="Användarnamn"
+                            required
+                        />
+                        <input
+                            type="password"
+                            class="log"
+                            name="pass"
+                            placeholder="Lösenord"
+                            required
+                        />
+                        <br />
+                        <br />
+                        <input
+                            type="submit"
+                            value="Logga in"
+                            name="push_button"
+                            class="send"
+                        />
+                    </form>
+                    <!-- Logga ut -->
+                    <form action="index.html">
+                        <input type="submit" value="Logga ut" class="send" />
+                    </form>
+                    <br />
+                    <hr />
+                    <br />
+                    <h2>Skapa Konto</h2>
+                    <form method="post" action="create.php">
+                        <input
+                            type="text"
+                            class="log"
+                            name="createName"
+                            id="createName"
+                            placeholder="Användarnamn"
+                            required
+                        />
+                        <input
+                            type="password"
+                            class="log"
+                            name="createPass"
+                            id="createPass"
+                            placeholder="Lösenord"
+                            required
+                        />
+                        <input
+                            type="text"
+                            class="log"
+                            name="presentation"
+                            id="presentation"
+                            placeholder="Beskrivning"
+                        />
+                        <input type="submit" value="Skapa Konto" class="send" />
+                    </form>
+                </div>
+            </div>
+        </div>
 
-    <button class="mainButton" onclick="document.getElementById('id01').style.display='block'">OPTIONS</button>
+        <!-- Script för att öppna Modal -->
+        <script>
+            var modal = document.getElementById('id01')
 
-    <div id="id01" class="modal">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
-      <div class="container">
-        <h2>Logga In</h2>
-        <form method="post" action="index.php">
-          <input type="text" class="log" name="email" placeholder="Användarnamn" required />
-          <input type="password" class="log" name="pass" placeholder="Lösenord" required />
-          <br />
-          <br />
-          <input type="submit" value="Logga in" name="push_button" class="send" />
-        </form>
-        <!-- Logga ut -->
-        <form action="index.html">
-          <input type="submit" value="Logga ut" class="send" />
-        </form>
-        <br />
-        <hr />
-        <br />
-        <h2>Skapa Konto</h2>
-        <form method="post" action="create.php">
-          <input type="text" class="log" name="createEmail" id="createEmail" placeholder="Användarnamn" required />
-          <input type="password" class="log" name="createPass" id="createPass" placeholder="Lösenord" required />
-          <input type="text" class="log" name="presentation" id="presentation" placeholder="Beskrivning" />
-          <input type="submit" value="Skapa Konto" class="send" />
-        </form>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- Script för att öppna Modal -->
-  <script>
-    var modal = document.getElementById('id01');
-
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
-</body>
-
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none'
+                }
+            }
+        </script>
+    </body>
 </html>
