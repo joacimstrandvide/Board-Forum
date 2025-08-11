@@ -1,2 +1,2 @@
 # Forum
-Discussion forum made with PHP & MySQL
+Discussion forum made with PHP & MySQL/sqlite
