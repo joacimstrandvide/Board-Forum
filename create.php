@@ -12,7 +12,7 @@ $db->exec("CREATE TABLE IF NOT EXISTS users (
     presentation TEXT
 )");
 
-$createName = $_POST["createEmail"];
+$createName = $_POST["createName"];
 $id = rand(10, 100);
 $createPass = $_POST["createPass"];
 $presentation = $_POST["presentation"];

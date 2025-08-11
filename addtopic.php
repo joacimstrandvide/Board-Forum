@@ -15,11 +15,11 @@ if (count($_POST) > 0) {
     $nbrrows = $_POST["nbrrows"];
 
 
-    echo "Inloggad som <a class='welcome' href=\"profile.php?name=" . urlencode($name) . "\" title=\"" . $presentation . "\" >" . $name . "</a><br /><br /><br />";
+    echo "Inloggad som <a class='username' href=\"profile.php?name=" . urlencode($name) . "\" title=\"" . $presentation . "\" >" . $name . "</a><br /><br /><br />";
     echo "<form action='index.php' method='post'>";
     echo "<input type='hidden' name='name' value='$name'>";
     echo "<input type='hidden' name='pass' value='$userpass'>";
-    echo "<input type='submit' class='result_button' name='submit' value='Tillbaka till startsidan'>";
+    echo "<input type='submit' class='thread-btn' name='submit' value='Tillbaka till startsidan'>";
     echo "</form>";
     echo "<h3>Ny tråd</h3>";
     echo "<form action='addtopicconfirmation.php' method='post'>";
@@ -32,7 +32,7 @@ if (count($_POST) > 0) {
     echo "<input type='text' name='header'><br>";
     echo "Inlägg<br>";
     echo "<textarea name='content' rows='10' cols='50'></textarea><br>";
-    echo "<input type='submit' class='result_button' name='submit' value='Publicera'>";
+    echo "<input type='submit' class='thread-btn' name='submit' value='Publicera'>";
     echo "</form>";
 
     $db->close();

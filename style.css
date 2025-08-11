@@ -1,15 +1,12 @@
 /* Body */
 body {
-    background-color: #0089ba;
+    background-color: #f1f1f1;
     font-family: 'PT Sans', sans-serif;
 }
 
 /* Header */
 .header {
-    margin-bottom: 2rem;
-    border: 1px solid #000;
-    border-radius: 20px;
-    background-color: #f1f1f1;
+    margin-bottom: 4rem;
 }
 
 .header h2 {
@@ -17,37 +14,37 @@ body {
     text-align: center;
 }
 
-/* Header 3 */
 h3 {
     border: 2px solid #001f3f;
     border-radius: 1rem;
     background: #fff;
-    padding: .5rem;
+    padding: 0.5rem;
     width: 5rem;
     text-align: center;
 }
 
 input.log {
-    height: 50px;
+    height: 3rem;
+    margin: 1rem auto;
     width: 20%;
     border: none;
-    border-bottom: 2px solid #000;
+    border-radius: 1rem;
 }
 
-input.log:hover {
-    webkit-box-shadow: 0px 0px 10px #41fcb4;
-    -moz-box-shadow: 0px 0px 10px #41fcb4;
-    box-shadow: 0px 0px 10px #41fcb4;
+.header-button {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background: #0089ba;
+    color: #fff;
+    cursor: pointer;
 }
 
-.mainButton {
-    margin-left: 47%;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.container {
-    padding: 16px;
+.modal-container {
+    padding: 1rem;
     text-align: center;
 }
 
@@ -68,12 +65,7 @@ input.log:hover {
     background-color: #fefefe;
     margin: 5% auto 15% auto;
     border: 1px solid #888;
-    width: 80%;
-}
-
-hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
+    width: 100%;
 }
 
 .close {
@@ -107,20 +99,19 @@ hr {
 /* Table resultat */
 table.result {
     width: 100%;
-    padding: 2%;
+    padding: 1rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .result td {
-    padding: 1%;
-    margin: 6px;
+    padding: 0.5rem;
+    margin: 0.5rem;
     background: #dddddd;
-    border: 2px solid #001f3f;
 }
 
 .result a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 th {
@@ -142,36 +133,52 @@ tr.result:nth-child(odd) {
     background-color: #fff;
 }
 
-.send {
+/* Logga in knapparna */
+.submit {
     color: #fff;
     background: #000;
-    padding: 2%;
+    padding: 1rem;
 }
 
-.send:hover {
-    transition: 1s;
+.submit:hover {
+    transition: 0.4s;
     color: #000;
     background: #fff;
 }
 
-.welcome {
-    border: 2px solid #000;
-    border-radius: 20px;
+/* Användarnamn */
+.username {
+    border-radius: 1rem;
     text-decoration: none;
-    padding: 10px;
+    padding: 0.6rem;
     background: #5a85be;
     color: #fff;
     font-family: 'PT Sans', sans-serif;
 }
 
-.result_button {
+/* Läs knappen */
+.read-btn {
     background-color: #ecf0f1;
     border: 2px solid #000;
-    border-radius: 10px;
-    padding: 5px;
+    border-radius: 1rem;
+    padding: 0.7rem;
 }
 
-.result_button:hover {
+.read-btn:hover {
     background-color: #b3b6b7;
-    transition: 1s;
+    transition: 0.4s;
+}
+
+/* Ny tråd  */
+.thread-btn {
+    margin-top: 3rem;
+    background-color: #ecf0f1;
+    border: 2px solid #000;
+    border-radius: 1rem;
+    padding: 0.7rem;
+}
+
+.thread-btn:hover {
+    background-color: #b3b6b7;
+    transition: 0.4s;
 }

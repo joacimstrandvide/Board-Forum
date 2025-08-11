@@ -13,11 +13,11 @@ if (count($_POST) > 0) {
     $userpass = $_POST["userpass"];
     $presentation = $_POST["presentation"];
     $nbrrows = intval($_POST["nbrrows"]);
-    echo "Inloggad som <a class='welcome' href=\"profile.php?name=" . urlencode($name) . "\" title=\"" . $presentation . "\" >" . $name . "</a><br />";
+    echo "Inloggad som <a class='username' href=\"profile.php?name=" . urlencode($name) . "\" title=\"" . $presentation . "\" >" . $name . "</a><br />";
     echo "<form action='index.php' method='post'>";
     echo "<input type='hidden' name='name' value='$name'>";
     echo "<input type='hidden' name='pass' value='$userpass'>";
-    echo "<input type='submit' class='result_button' name='submit' value='Tillbaka till startsidan'>";
+    echo "<input type='submit' class='thread-btn' name='submit' value='Tillbaka till startsidan'>";
     echo "</form>";
 
     $header = htmlspecialchars($_POST["header"], ENT_QUOTES);

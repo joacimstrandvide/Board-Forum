@@ -18,11 +18,11 @@ if (count($_POST) > 0) {
     $updates = $_POST["updates"];
     $originator = $_POST["originator"];
 
-    echo "Inloggad som <a class='welcome' href=\"profile.php?name=" . urlencode($name) . "\" title=\"" . $presentation . "\" >" . $name . "</a><br /><br /><br />";
+    echo "Inloggad som <a class='username' href=\"profile.php?name=" . urlencode($name) . "\" title=\"" . $presentation . "\" >" . $name . "</a><br /><br /><br />";
     echo "<form action='index.php' method='post'>";
     echo "<input type='hidden' name='name' value='$name'>";
     echo "<input type='hidden' name='pass' value='$userpass'>";
-    echo "<input type='submit' name='submit' class='result_button' value='Tillbaka till startsidan'>";
+    echo "<input type='submit' name='submit' class='thread-btn' value='Tillbaka till startsidan'>";
     echo "</form>";
     echo "<br />";
     echo "<hr />";
@@ -45,7 +45,6 @@ if (count($_POST) > 0) {
         echo "<br>";
         echo "<br>";
         echo "<a href=\"" . $row["user"] . "\" >" . $row["user"] . "</a><br>";
-        echo "<a>Inlägg</a>" . "</td>";
         echo "<td>" . $row["text"] . "</td>";
         echo "</tr>";
     }
@@ -63,10 +62,6 @@ if (count($_POST) > 0) {
     echo "<input type='hidden' name='nbrposts' value='$nbrposts'>";
     echo "<input type='hidden' name='header' value='$header'>";
     echo "<textarea name='content' rows='10' cols='50'></textarea><br>";
-    if ($updates == 1) {
-        echo "Lösenord till epostkontot:<br>";
-        echo "<input type='password' name='mailpass'><br>";
-    }
     echo "<input type='submit' name='submit' value='Lägg till'>";
     echo "</form>";
 

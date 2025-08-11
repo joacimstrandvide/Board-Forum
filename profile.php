@@ -21,7 +21,7 @@ if (isset($_GET['name'])) {
         echo "<form action='index.php' method='post'>";
         echo "<input type='hidden' name='name' value='" . htmlspecialchars($user['name']) . "'>";
         echo "<input type='hidden' name='pass' value='" . htmlspecialchars($user['passcode']) . "'>";
-        echo "<input type='submit' class='result_button' name='submit' value='Tillbaka till startsidan'>";
+        echo "<input type='submit' class='thread-btn' name='submit' value='Tillbaka till startsidan'>";
         echo "</form>";
     } else {
         echo "<p>Användare hittades inte.</p>";

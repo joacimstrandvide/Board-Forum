@@ -21,7 +21,7 @@ if (count($_POST) > 0) {
 
     if ($row = $result->fetchArray(SQLITE3_ASSOC)) {
         $presentation = $row["presentation"];
-        echo "Inloggad som <a class='welcome' href=\"profile.php?name=" . urlencode($name) . "\" title=\"" . $presentation . "\" >" . $name . "</a><br />";
+        echo "Inloggad som <a class='username' href=\"profile.php?name=" . urlencode($name) . "\" title=\"" . $presentation . "\" >" . $name . "</a><br />";
 
         // List topics
         $topics = $db->query("SELECT topics.id AS id, header, originator, presentation, updates FROM topics JOIN users ON originator=users.name");
@@ -37,7 +37,7 @@ if (count($_POST) > 0) {
         echo "<input type='hidden' name='dbpass' value=''>";
         echo "<input type='hidden' name='presentation' value='$presentation'>";
         echo "<input type='hidden' name='nbrrows' value='$nbrrows'>";
-        echo "<input class='result_button' type='submit' name='submit' value='Skapa ny tråd'>";
+        echo "<input class='thread-btn' type='submit' name='submit' value='Skapa ny tråd'>";
         echo "</form>";
         if ($nbrrows > 0) {
             echo "<p>Det finns ";
@@ -67,7 +67,7 @@ if (count($_POST) > 0) {
                 echo "<input type='hidden' name='topicid' value='$topicid'>";
                 echo "<input type='hidden' name='updates' value='$updates'>";
                 echo "<input type='hidden' name='originator' value='$originator'>";
-                echo "<input class='result_button' type='submit' name='submit' value='Läs'>";
+                echo "<input class='read-btn' type='submit' name='submit' value='Läs'>";
                 echo "</form></td><td>";
                 echo $topicid + 1;
                 echo "</td><td>";
